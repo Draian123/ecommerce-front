@@ -6,8 +6,7 @@ import Button from "@/components/Button";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import Spinner from "@/components/Spinner";
-import Textarea from "./Textarea";
-
+import Textarea from "@/components/Textarea";
 
 const Title = styled.h2`
   font-size:1.2rem;
