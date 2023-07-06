@@ -6,7 +6,7 @@ import Button from "@/components/Button";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import Spinner from "@/components/Spinner";
-import Textarea from "./TextArea";
+import Textarea from "@components/TextArea";
 
 const Title = styled.h2`
   font-size:1.2rem;
@@ -110,7 +110,7 @@ export default function ProductReviews({product}) {
               <p>No reviews :</p>
             )}
             {reviews.length > 0 && reviews.map(review => (
-              <ReviewWrapper>
+              <ReviewWrapper key={review._id}>
                 <ReviewHeader>
                   <StarsRating size={'sm'} disabled={true} defaultHowMany={review.stars} />
                   <time>{(new Date(review.createdAt)).toLocaleString('sv-SE')}</time>
