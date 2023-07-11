@@ -45,6 +45,8 @@ export default async function handler(req,res) {
     userEmail: session?.user?.email,
   });
 
+  console.log(orderDoc)
+
   const shippingFeeSetting = await Setting.findOne({name:'shippingFee'});
   const shippingFeeCents = parseInt(shippingFeeSetting.value || '0') * 100;
 
